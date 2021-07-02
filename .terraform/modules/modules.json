@@ -1,1 +1,1 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"cloud_router","Source":"terraform-google-modules/cloud-router/google","Version":"0.4.0","Dir":".terraform/modules/cloud_router"}]}
+{"Modules":[{"Key":"cloud_router","Source":"terraform-google-modules/cloud-router/google","Version":"0.4.0","Dir":".terraform/modules/cloud_router"},{"Key":"","Source":"","Dir":"."}]}

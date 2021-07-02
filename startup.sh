@@ -62,7 +62,7 @@ server {
         return 200;
     }
     location / {
-        try_files $uri /index.php$is_args$args;
+        try_files \$uri /index.php\$is_args\$args;
     }
     location ~ \.php$ {
         include snippets/fastcgi-php.conf;
@@ -100,6 +100,10 @@ cp /tmp/wordpress/wp-config-sample.php /tmp/wordpress/wp-config.php
 sudo cp -a /tmp/wordpress/. /var/www/wordpress
 sudo chown -R www-data:www-data /var/www/wordpress
 
+#wrodpress database
+mysql -e "CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;"
+mysql -e "CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'password';"
+mysql -e "GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost';"
 
 #wordpress config file
 touch wp-config.php
