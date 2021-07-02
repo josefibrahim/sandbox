@@ -20,12 +20,7 @@ resource "google_compute_router_nat" "nat" {
     filter = "ERRORS_ONLY"
   }
 }
-/*
-resource "google_compute_address" "static" {
-  name = "ipv4-address"
-  region = var.region
-}
-*/
+
 resource "google_compute_global_address" "default" {
   name = "global-address"
 }

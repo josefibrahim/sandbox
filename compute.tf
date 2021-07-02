@@ -13,11 +13,6 @@ resource "google_compute_instance" "vm" {
 
   network_interface {
     network = google_compute_network.vpc_network.name
-    /*
-         access_config{
-             nat_ip = google_compute_address.static.address
-         }
-         */
   }
 
   service_account {
